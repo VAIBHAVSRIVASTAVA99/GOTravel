@@ -5,7 +5,6 @@
     "start": "node src/index.js",
 
     "dev": "nodemon src/index.js"
-
   },
 
   "dependencies": {
@@ -28,13 +27,21 @@
 
     "mongoose": "^8.10.0",
 
+    "path": "^0.12.7",
+
+    "stream": "^0.0.3",
+
     "zod": "^3.24.1"
 
   },
 
   "devDependencies": {
 
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+
+    "webpack": "^5.97.1",
+
+    "webpack-cli": "^6.0.1"
 
   }
 
