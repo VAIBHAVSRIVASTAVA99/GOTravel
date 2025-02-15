@@ -13,7 +13,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/user/signup", {
+      const response = await fetch("REACT_APP_BASE_URL/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
