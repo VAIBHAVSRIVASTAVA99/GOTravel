@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-require("dotenv").config();
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,7 +14,9 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}`/user/signin, {
+      console.log("Backend URL:", process.env.REACT_APP_BASE_URL); 
+
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/user/signin`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -51,7 +52,6 @@ const Login = () => {
       </div>
 
       <div className="pt-20 min-h-screen grid grid-cols-1 lg:grid-cols-2 rounded-2xl">
-        
         <div
           className="hidden lg:block bg-cover bg-center rounded-3xl m-2"
           style={{ backgroundImage: `url(${beachImage})` }}
