@@ -16,7 +16,7 @@ const Login = () => {
     try {
       console.log("Backend URL:",import.meta.env.VITE_BASE_URL); 
 
-      const response = await fetch(`${import.meta.env.REACT_APP_BASE_URL}/user/signin`, {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/user/signin`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
