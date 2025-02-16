@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      console.log("Backend URL:",import.meta.env.VITE_BASE_URL); 
+      
 
       const response = await fetch(`${import.meta.env.VITE_BASE_URL}/user/signin`, {
         method: "POST",
