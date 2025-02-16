@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-require("dotenv").config();
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,7 +14,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      console.log("Backend URL:",process.env.REACT_APP_BASE_URL); 
+      console.log("Backend URL:",import.meta.env.VITE_BASE_URL); 
 
       const response = await fetch(`${import.meta.env.REACT_APP_BASE_URL}/user/signin`, {
         method: "POST",
