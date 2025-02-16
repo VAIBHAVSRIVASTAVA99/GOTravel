@@ -13,7 +13,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("REACT_APP_BASE_URL/signup", {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/user/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const Signup = () => {
 
         setTimeout(() => {
           navigate("/itinerary-planner");
-        }, 2500);
+        }, 5000);
       } else {
         const errorData = await response.json();
         toast.error(`Error: ${errorData.message}`, {
