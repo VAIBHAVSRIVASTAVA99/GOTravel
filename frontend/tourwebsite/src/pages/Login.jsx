@@ -14,9 +14,9 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      console.log("Backend URL:", process.env.REACT_APP_BASE_URL); 
+      console.log("Backend URL:",import.meta.env.REACT_APP_BASE_URL); 
 
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/user/signin`, {
+      const response = await fetch(`${import.meta.env.REACT_APP_BASE_URL}/user/signin`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
