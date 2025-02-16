@@ -21,7 +21,7 @@ const ItineraryPlanner = () => {
       localStorage.setItem("location", location);
       localStorage.setItem("days", days);
       
-      const response = await fetch("http://localhost:3000/api/generate-itinerary", {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/generate-itinerary`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ location, days }),
